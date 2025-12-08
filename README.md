@@ -134,29 +134,6 @@ To have multiple tasks running at once - for concurrent processing please run th
 celery -A text_extract_api.tasks worker --loglevel=info --pool=solo & # to scale by concurrent processing please run this line as many times as many concurrent processess you want to have running
 ```
 
-## Online demo
-
-To try out the application with our hosted version you can skip the Getting started and try out the CLI tool against our cloud:
-
-Open in the browser: <a href="https://demo.doctractor.com/">demo.doctractor.com</a>
-
-... or run n the terminal:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -e .
-export OCR_UPLOAD_URL=https://doctractor:Aekie2ao@api.doctractor.com/ocr/upload
-export RESULT_URL=https://doctractor:Aekie2ao@api.doctractor.com/ocr/result/
-
-python client/cli.py ocr_upload --file examples/example-mri.pdf --ocr_cache --prompt_file=examples/example-mri-remove-pii.txt
-```
-
-[Demo Source code](https://github.com/CatchTheTornado/text-extract-api-demo)
-
-**Note:** In the free demo we don't guarantee any processing times. The API is Open so please do **not send any secret documents neither any documents containing personal information**, If you do - you're doing it on your own risk and responsiblity.
-
-<img src="screenshots/demo.png" alt="Demo screenshot" />
 
 ## Join us on Discord
 
